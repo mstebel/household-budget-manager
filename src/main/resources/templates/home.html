@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Homepage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+<header th:replace="fragments::header(title = 'Budżet domowy')"></header>
+<main class="container">
+    <a href="/add" class = "btn btn-light link">Dodaj transakcję</a>
+    <a href="/printAll?mode=edit" class = "btn btn-light link">Edytuj transakcję</a>
+    <a href="/printAll?mode=delete" class = "btn btn-light link">Skasuj transakcję</a>
+    <a href="/print?type=earning" class = "btn btn-light link">Wyświetl wszystke przychody</a>
+    <a href="/print?type=expense" class = "btn btn-light link">Wyświetl wszystke wydatki</a>
+</main>
+</body>
+</html>
